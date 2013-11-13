@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\Main.cs">
+    <Files>
+      <File FileName="Assets\script\CollosionCallback.cs" Line="22" Column="3" />
+      <File FileName="Assets\script\Ball.cs" Line="18" Column="3" />
+      <File FileName="Assets\script\Main.cs" Line="11" Column="1" />
+      <File FileName="Assets\script\Control.cs" Line="56" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
