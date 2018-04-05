@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Main : MonoBehaviour {
-	public RuntimeAnimatorController mainController = null;
+	//public RuntimeAnimatorController mainController = null;
 	public Control control = null;
 	public GameObject table = null;
 	
@@ -85,13 +85,8 @@ public class Main : MonoBehaviour {
 		else if(_gameState ==  GameState.RESET)
 		{
 			animator  = table.GetComponent<Animator>();
-			stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-		
-			if(stateInfo.nameHash == Animator.StringToHash("BaseLayer.idle"))
-			{
-				animator.SetBool(Animator.StringToHash("isOpen"), true);
-			}
-			ballDropCount = 0;
+      animator.SetTrigger("open");
+      ballDropCount = 0;
 			_gameState = GameState.RESET2;
 		}
 		else if(_gameState ==  GameState.RESET2)

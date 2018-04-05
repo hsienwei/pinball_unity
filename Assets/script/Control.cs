@@ -14,20 +14,20 @@ public class Control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Animator animator  = gameObject.GetComponent<Animator>();
+		/*Animator animator  = gameObject.GetComponent<Animator>();
 		AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 		if(stateInfo.nameHash == Animator.StringToHash("ControlLayer.push") &&
 			animator.GetBool("isPush"))
 		{
 			animator.SetBool(Animator.StringToHash("isPush"), false);
-		}
+		}*/
 			
 		//this.transform.position = controlInitPos;
 	}
 	
 	public void push(int power)
 	{
-		/*Animator animator  = gameObject.GetComponent<Animator>();
+    /*Animator animator  = gameObject.GetComponent<Animator>();
 		AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 		
 		if(stateInfo.nameHash == Animator.StringToHash("ControlLayer.idle"))
@@ -40,9 +40,12 @@ public class Control : MonoBehaviour {
 			}
 			curIdx++;
 		}*/
-		Animation animation  = gameObject.GetComponent<Animation>();
-		animation.Play("push2");
-		if(_balls[curIdx] != null)
+    //Animation animation  = gameObject.GetComponent<Animation>();
+    //animation.Play("push2");
+    Animator animator = gameObject.GetComponent<Animator>();
+    animator.SetTrigger("move");
+
+    if (_balls[curIdx] != null)
 		{
 			_balls[curIdx].fire(power);
 		}
@@ -57,7 +60,7 @@ public class Control : MonoBehaviour {
 	public void setBall()
 	{
 		_balls[curIdx].transform.position = ballInitPos;
-		_balls[curIdx].rigidbody.velocity = new Vector3(0, 0, 0);
+		_balls[curIdx].GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
 	}
 	
 	public bool isEnd()
