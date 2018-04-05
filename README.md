@@ -1,6 +1,6 @@
 pinball_unity
 =============
-Demo:  https://dl.dropboxusercontent.com/u/10581994/pinball/pinball.html
+Demo:  http://hsienwei.github.io/pages/pinball/
 
 It's a simple project.
 Train my Unity Skill.
